@@ -1,5 +1,7 @@
 # tempgen.nvim
 
+Your good ol' handy friend `cp` meets with `telescope.nvim`.
+
 <!--toc:start-->
 
 - [tempgen.nvim](#tempgennvim)
@@ -13,8 +15,6 @@
   - [Contribution](#contribution)
   - [TODO](#todo)
   <!--toc:end-->
-
-Your good ol' handy friend `cp` meets with `telescope.nvim`.
 
 ## What is Tempgen?
 
@@ -100,7 +100,7 @@ So I don't expect this plugin to have any contribution at all, but just in case,
 
 Here are the main points I found throughout my daily usage for a couple weeks:
 
-1 - `filetype` - `extension` mapping: Originally I thought it would be nice to directly tie buffer filetype with templates' extensions, to organize the templates by their name. However in time, I realized this clutters the template names way too much than expected, so I'll implement a 1-1 file extension mapping instead.
-2 - Tests: If you checked the code itself, it's pretty dead simple and does not have any tests. But it's a good practice to have tests to show the intention and as a self reference.
-3 - `checkhealth` support: This one is needed for people to see whether the plugin is installed correctly or not.
-4 - Code documentation: I would love to enable `:help` for this plugin, to have the documentation directly inside Neovim.
+- `filetype` - `extension` mapping: Originally I thought it would be nice to directly tie buffer filetype with templates' extensions, to organize the templates by their name. However in time, I realized this clutters the template names way too much than expected, so I'll implement a 1-1 file extension mapping instead.
+- Tests: If you checked the code itself, it's pretty dead simple and does not have any tests. But it's a good practice to have tests to show the intention and as a self reference.
+- `checkhealth` support: This one is needed for people to see whether the plugin is installed correctly or not.
+- Code documentation: I would love to enable `:help` for this plugin, to have the documentation directly inside Neovim.
