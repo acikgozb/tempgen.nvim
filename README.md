@@ -4,52 +4,26 @@ Your good ol' handy friend `cp` meets with `telescope.nvim`.
 
 <!--toc:start-->
 
-- [tempgen.nvim](#tempgennvim)
-  - [What is Tempgen?](#what-is-tempgen)
-  - [Demo](#demo)
-  - [First, a Disclaimer](#first-a-disclaimer)
-  - [Why Should You Use This Plugin?](#why-should-you-use-this-plugin)
-  - [Installation](#installation)
-  - [Configuration](#configuration)
-  - [Usage](#usage)
-  - [Contribution](#contribution)
-  - [TODO](#todo)
-  <!--toc:end-->
+- [What is Tempgen?](#what-is-tempgen)
+- [Demo](#demo)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [TODO](#todo)
+<!--toc:end-->
 
-## What is Tempgen?
+## <a id='what-is-tempgen'/> What is `tempgen.nvim`?
 
-Tempgen allows people to scaffold their files as easy as fuzzy finding a file via `telescope.nvim`.
+`tempgen.nvim` allows people to scaffold their files as easy as fuzzy finding a file via `telescope.nvim`.
 
-It allows users to store their "templates" wherever they want and then later on reference them inside files - based on their filetype.
+It allows users to store their **templates** wherever they want and then later on reference them inside files - based on their **filetype**.
 
-## Demo
+## <a id='demo'/> Demo
 
 <img src="./assets/tempgen-demo.gif"/>
 
-## First, a Disclaimer
-
-I needed a tool which automates the scaffolding of certain configuration files (mainly README's, and YAML's). At that time, I decided to write `tempgen.nvim`, instead of searching online to find a better one - because my needs were pretty simple. Also, I wanted to dive into developing a Neovim plugin to see how is the experience like.
-
-I do not know whether there is a tool which handles this in a better, broader way. If there is one, feel free to use that one instead.
-
-This tool is not fully fledged out - there are still a couple of missing things, for more information regarding this, check the [TODO]() section.
-
-## Why Should You Use This Plugin?
-
-This plugin is only used for scaffolding files and nothing more, so it's perfect for scenarios where you don't want to write the whole "skeleton" of the file again, just to get started on your work.
-
-Regarding the use cases, the only limit is your imagination, if you see a pattern between the projects you've been developing, you can extract the main idea (aka. create a template) and then automate your future work.
-
-A couple of examples to start the train of thoughts:
-
-- README's: You can have a basic template for all README's, or individual README's for different project types.
-- Tool configuration files: For each tool you are using (mostly talking about DevOps tools here), you can create basic templates to kickstart your configurations.
-- Language based configuration files (linting, project setup, etc.) - If there is no scaffolding available for these via CLI tools, you can create your own templates and reference them instead. Also, if you find yourself updating 3rd party CLI generated files a little bit every time you create them, you can automate this process as well.
-- Project code itself: You can even create templates for certain structures you use in your projects. If you discovered a nice structure, and want to use it in your future projects? Automate it away!
-
-This plugin is between code snippets and full fledged CLI project scaffolding - anything in between, that's the place for `tempgen.nvim`.
-
-## Installation
+## <a id='installation'/> Installation
 
 You can install this plugin, like any other by using your favorite plugin manager.
 
@@ -69,18 +43,21 @@ Here's the installation for `lazy.nvim`:
 }
 ```
 
-## Configuration
+## <a id='configuration'/> Configuration
 
-The confiugration itself is pretty easy and straightforward. Basically, you need to provide a path to your templates to allow `tempgen.nvim` to reference it later on in your Neovim buffer.
+The confiugration itself is pretty easy and straightforward.
+Basically, you need to provide a path to your templates to allow `tempgen.nvim` to reference it later on in your Neovim buffer.
 
 A couple of notes regarding the template path:
 
-- The path can be pretty much anything you want. As long as your user has read permissions to your path, `tempgen.nvim` can pick it up.
-- You can organize your template path however you want. Feel free to use nested directories to organize your templates.
+- The path can be pretty much anything you want.
+  As long as your user has read permissions to your path, `tempgen.nvim` can pick it up.
+- You can organize your template path however you want.
+  Feel free to use nested directories to organize your templates.
 
 Currently, the Telescope pane is not customizable, this plugin uses your base configuration for Telescope.
 
-## Usage
+## <a id='usage'/> Usage
 
 The plugin comes with a command called `Tempgen`. In your current Neovim buffer, executing `:Tempgen` opens up Telescope, allowing you to see your templates.
 
@@ -90,13 +67,13 @@ The main gist here is - your buffer's `filetype` should match with your template
 
 To check the filetype, you can execute `:lua print(vim.bo.filetype)`.
 
-## Contribution
+## <a id='contribution'/> Contribution
 
 Originally, I did not created this repository to publicly share the plugin, I just wanted version control throughout the development. But later on, I thought it would be nice to share the experience and see whether people develop interest or not.
 
 So I don't expect this plugin to have any contribution at all, but just in case, feel free to open an issue or even a PR if you encounter any errors or if you see some nice improvements.
 
-## TODO
+## <a id='todo'/> TODO
 
 Here are the main points I found throughout my daily usage for a couple weeks:
 
